@@ -13,6 +13,10 @@ class LeafletMap {
 
         this.loggedData = []; 
 
+        this.btn1 = document.getElementById('btn1');
+        this.btn2 = document.getElementById('btn2');
+        this.btn3 = document.getElementById('btn3');
+
 
     }
 
