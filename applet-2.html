@@ -46,9 +46,10 @@
         .btn-container {
             justify-items: auto;
             margin-top: 2rem;
-            background: linear-gradient(to top right, #ffa351, #ffbe7b);
+            background: linear-gradient(to right, #ffa351, #ffbe7b);
             border-radius: 15px;
             padding: 3rem;
+            padding-bottom: 3px;
         }
 
         .btn-container h4 {
@@ -109,6 +110,7 @@
 <body>
 
     <div class="container">
+        <h2>Leaflet Map</h2>
         <div id="map"></div>
 
         <script src="./applet-2.js"></script>
@@ -117,7 +119,9 @@
 </body>
 
 <div class="container2">
+    <h2>Attendance Map</h2>
     <div class="btn-container">
+        
         <h4 id="logCount">Attendance Count: </h4>
         <button class="btn btn-primary" id="btn">Bukel's Cafeteria, Store & Print Shop</button>
         <h4 id="logCountCCS">Attendance Count: </h4>
