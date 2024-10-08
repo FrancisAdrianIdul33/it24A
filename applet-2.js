@@ -17,6 +17,12 @@ class LeafletMap {
         this.btn2 = document.getElementById('btn2');
         this.btn3 = document.getElementById('btn3');
 
+        
+        this.logCountElement = document.getElementById('logCountBukels');
+        this.logCount1Element = document.getElementById('logCountWako');
+        this.logCount2Element = document.getElementById('logCountKNN');
+        this.idContainer = document.getElementById('logContainer');
+        this.btnclear = document.getElementById('btnclear');
 
     }
 
