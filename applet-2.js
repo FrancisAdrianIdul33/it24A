@@ -11,13 +11,13 @@ class LeafletMap {
         this.markerCounts = {};
         this.markers = [];
 
-        this.loggedData = []; 
+        this.loggedData = [];
 
         this.btn1 = document.getElementById('btn1');
         this.btn2 = document.getElementById('btn2');
         this.btn3 = document.getElementById('btn3');
 
-        
+
         this.logCountElement = document.getElementById('logCountBukels');
         this.logCount1Element = document.getElementById('logCountWako');
         this.logCount2Element = document.getElementById('logCountKNN');
@@ -55,7 +55,12 @@ class LeafletMap {
     }
 
 
+    displayLogCount() {
+        this.logCountElement.innerHTML = `Bukels Attendance: ${this.attendanceCountSC}`;
+        this.logCount1Element.innerHTML = `Wako Attendance: ${this.attendanceCountBA}`;
+        this.logCount2Element.innerHTML = `KNN Laboratory Attendance: ${this.attendanceCountLab}`;
 
+    }
 }
 const Mymap = new LeafletMap('map', [8.360697, 124.867345], 17);
 
