@@ -21,7 +21,7 @@
         }
 
         #map {
-            width: 100%;
+            width: 105%;
             height: 500px;
             justify-content: center;
         }
@@ -36,10 +36,17 @@
             justify-content: center;
         }
 
+        .container2 {
+            width: 95%;
+            margin-top: 2rem;
+            margin-left: 2rem;
+            justify-content: center;
+        }
+
         .btn-container {
             justify-items: auto;
             margin-top: 2rem;
-            background: linear-gradient(to top right, rgb(0, 0, 0), rgb(1, 1, 43));
+            background: linear-gradient(to top right, #ffa351, #ffbe7b);
             border-radius: 15px;
             padding: 3rem;
         }
@@ -53,7 +60,7 @@
         }
 
         .btn-container #btnclear {
-            margin-left: 15rem;
+            margin-left: 0.1rem;
         }
     </style>
     <div>
@@ -102,12 +109,25 @@
 <body>
 
     <div class="container">
-        <h2>Leaflet Map</h2>
         <div id="map"></div>
 
-
+        <script src="./applet-2.js"></script>
+    </div>
 
 </body>
-<script src="./applet-2.js"></script>
+
+<div class="container2">
+    <div class="btn-container">
+        <h4 id="logCount">Attendance Count: </h4>
+        <button class="btn btn-primary" id="btn">Bukel's Cafeteria, Store & Print Shop</button>
+        <h4 id="logCountCCS">Attendance Count: </h4>
+        <button class="btn btn-primary" id="btn1">Wako Wako Eatery</button>
+        <h4 id="logCountBA">Attendance Count: </h4>
+        <button class="btn btn-primary" id="btn2">Kalenderya ni Nanay</button>
+        <div id="logContainer"></div>
+        <button class="btn btn-primary" id="btnclear">Clear</button>
+    </div>
+
+    </body>
 
 </html>
