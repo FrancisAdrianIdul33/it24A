@@ -8,7 +8,10 @@ class LeafletMap {
         this.attendanceCountWako = 0;
         this.attendanceCountKNN = 0;
 
-        
+        this.markerCounts = {};
+        this.markers = [];
+
+        this.loggedData = []; 
 
 
     }
