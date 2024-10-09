@@ -24,9 +24,9 @@ class LeafletMap {
         this.idContainer = document.getElementById('logContainer');
         this.btnclear = document.getElementById('btnclear');
 
-        this.btn.addEventListener('click', () => this.dataSc());
-        this.btn1.addEventListener('click', () => this.dataLab());
-        this.btn2.addEventListener('click', () => this.dataBa());
+        this.btn.addEventListener('click', () => this.dataBukels());
+        this.btn1.addEventListener('click', () => this.dataWako());
+        this.btn2.addEventListener('click', () => this.dataKNN());
         this.btnclear.addEventListener('click', () => this.clearLogs());
 
     }
@@ -61,6 +61,25 @@ class LeafletMap {
         this.logCount2Element.innerHTML = `KNN Laboratory Attendance: ${this.attendanceCountLab}`;
 
     }
+    dataSc() {
+        this.addMarker(8.361655, 124.867307, "Bukel's Cafeteria, Store & Print Shop");
+        this.attendanceCountBukels++;
+        this.updateLogDisplay();
+    }
+
+    dataBa() {
+        this.addMarker(8.362302, 124.867640, 'Wako Wako Eatery');
+        this.attendanceCountWako++;
+        this.updateLogDisplay();
+    }
+
+    dataLab() {
+        this.addMarker(8.360823, 124.866330, 'Kalenderya ni Nanay');
+        this.attendanceCountKNN++;
+        this.updateLogDisplay();
+    }
+
+    
 }
 const Mymap = new LeafletMap('map', [8.360697, 124.867345], 17);
 
