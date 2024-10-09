@@ -60,25 +60,25 @@ class LeafletMap {
     }
 
     displayLogCount() {
-        this.logCountElement.innerHTML = `SC Building Attendance: ${this.attendanceCountB}`;
-        this.logCount1Element.innerHTML = `BA Building Attendance: ${this.attendanceCountW}`;
-        this.logCount2Element.innerHTML = `CCS Laboratory Attendance: ${this.attendanceCountK}`;
+        this.logCountElement.innerHTML = `Bukel's Cafeteria, Store & Print Shop: ${this.attendanceCountB}`;
+        this.logCount1Element.innerHTML = `Wako Wako Eatery: ${this.attendanceCountW}`;
+        this.logCount2Element.innerHTML = `Karenderya ni Nanay: ${this.attendanceCountK}`;
     }
 
     dataB() {
-        this.addMarker(8.361655, 124.867307, "Bukel's Cafeteria, Store & Print Shop");
+        this.addMarker(8.361655, 124.867307, "Log Attendance");
         this.attendanceCountB++;
         this.updateLogDisplay();
     }
 
-    dataK() {
-        this.addMarker(8.362302, 124.867640, 'Wako Wako Eatery');
+    dataW() {
+        this.addMarker(8.362302, 124.867640, 'Log Attendance');
         this.attendanceCountW++;
         this.updateLogDisplay();
     }
 
-    dataW() {
-        this.addMarker(8.360823, 124.866330, 'Karenderya ni Nanay');
+    dataK() {
+        this.addMarker(8.360823, 124.866330, 'Log Attendance');
         this.attendanceCountK++;
         this.updateLogDisplay();
     }
