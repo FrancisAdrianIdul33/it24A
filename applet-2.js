@@ -39,14 +39,14 @@ class LeafletMap {
     addMarker(lat, long, message) {
         const marker = L.marker([lat, long]).addTo(this.map)
             .bindPopup(message);
-        this.markers.push(marker); // Added to keep track of markers
+        this.markers.push(marker); 
     }
 
     loadMarkersFromJson(url) {
         fetch(url)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`); // Added error handling for HTTP response
+                    throw new Error(`HTTP error! status: ${response.status}`); 
                 }
                 return response.json();
             })
@@ -55,13 +55,13 @@ class LeafletMap {
                     this.addMarker(marker.latitude, marker.longitude, marker.message);
                 });
             })
-            .catch(error => console.error("Error loading markers from JSON:", error)); // Enhanced error message
+            .catch(error => console.error("Error loading markers from JSON:", error));
     }
 
     displayLogCount() {
-        this.logCountElement.innerHTML = `Bukels Attendance: ${this.attendanceCountBukels}`; // Corrected variable name
-        this.logCount1Element.innerHTML = `Wako Attendance: ${this.attendanceCountWako}`; // Corrected variable name
-        this.logCount2Element.innerHTML = `KNN Laboratory Attendance: ${this.attendanceCountKNN}`; // Corrected variable name
+        this.logCountElement.innerHTML = `Bukels Attendance: ${this.attendanceCountBukels}`;
+        this.logCount1Element.innerHTML = `Wako Attendance: ${this.attendanceCountWako}`;
+        this.logCount2Element.innerHTML = `KNN Laboratory Attendance: ${this.attendanceCountKNN}`;
     }
 
     dataBukels() {
@@ -87,7 +87,7 @@ class LeafletMap {
         this.loggedData.forEach(data => {
             const logItem = document.createElement('div');
             logItem.className = 'log-item';
-            logItem.innerText = data; // Added to display logged data
+            logItem.innerText = data; 
             this.idContainer.appendChild(logItem);
         });
         this.displayLogCount();
@@ -103,14 +103,14 @@ class LeafletMap {
         this.markers.forEach(marker => {
             const message = marker.getPopup().getContent().split('<br>')[0];
             this.markerCounts[message] = 0;
-            this.updateMarkerPopup(marker, message); // Ensure this method exists or handle accordingly
+            this.updateMarkerPopup(marker, message); 
         });
 
         this.updateLogDisplay();
     }
 
     updateMarkerPopup(marker, message) {
-        // Placeholder for updating marker popup content
+        
         marker.getPopup().setContent(`${message} - Count: ${this.markerCounts[message]}`);
     }
 }
