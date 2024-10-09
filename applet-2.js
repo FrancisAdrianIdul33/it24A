@@ -61,23 +61,25 @@ class LeafletMap {
         this.logCount2Element.innerHTML = `KNN Laboratory Attendance: ${this.attendanceCountLab}`;
 
     }
-    dataSc() {
+    dataBukels() {
         this.addMarker(8.361655, 124.867307, "Bukel's Cafeteria, Store & Print Shop");
         this.attendanceCountBukels++;
         this.updateLogDisplay();
     }
 
-    dataBa() {
+    dataWako() {
         this.addMarker(8.362302, 124.867640, 'Wako Wako Eatery');
         this.attendanceCountWako++;
         this.updateLogDisplay();
     }
 
-    dataLab() {
+    dataKNN() {
         this.addMarker(8.360823, 124.866330, 'Kalenderya ni Nanay');
         this.attendanceCountKNN++;
         this.updateLogDisplay();
     }
+
+
 
     
 }
