@@ -66,19 +66,19 @@ class LeafletMap {
     }
 
     dataB() {
-        this.addMarker(8.361655, 124.867307, "Log Attendance");
+        this.addMarker(8.361655, 124.867307, "Bukel's Cafeteria, Store & Print Shop");
         this.attendanceCountB++;
         this.updateLogDisplay();
     }
 
     dataW() {
-        this.addMarker(8.362302, 124.867640, 'Log Attendance');
+        this.addMarker(8.362302, 124.867640, 'Wako Wako Eatery');
         this.attendanceCountW++;
         this.updateLogDisplay();
     }
 
     dataK() {
-        this.addMarker(8.360823, 124.866330, 'Log Attendance');
+        this.addMarker(8.360823, 124.866330, 'Kalenderya ni Nanay');
         this.attendanceCountK++;
         this.updateLogDisplay();
     }
