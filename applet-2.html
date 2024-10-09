@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-    <title>JavaScript Web Programmings</title>
+    <title>JavaScript Web Programming</title>
 
     <style>
         body {
@@ -23,33 +23,17 @@
         #map {
             width: 100%;
             height: 500px;
-            justify-content: center;
         }
-
-
-        /*Attendance*/
 
         .container {
             width: 95%;
-            margin-top: 2rem;
-            margin-left: 2rem;
-            justify-content: center;
-        }
-
-        .container2 {
-            width: 40%;
-            margin-top: 2rem;
-            margin-left: 2rem;
-            justify-content: center;
+            margin: 2rem auto;
         }
 
         .btn-container {
-            justify-items: auto;
-            margin-top: 2rem;
             background: linear-gradient(to right, #eed971, #ffbe7b);
-            border-radius: 15px;
-            padding: 3rem;
-            padding-bottom: 3px;
+            border-radius: 5px;
+            padding: 3rem 1rem;
             margin-bottom: 3rem;
         }
 
@@ -65,80 +49,63 @@
             margin-left: 0.1rem;
         }
     </style>
-    <div>
-        <nav class="navbar navbar-expand-lg" style="background: linear-gradient(to right, #ffa351, #ffbe7b, #eed971);">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contacts</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Applet
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./applet-2.html">Applet 2 Leaflet Map</a></li>
-                                <li><a class="dropdown-item" href="./applet-3.html">Applet 3 Button Counts</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                            </ul>
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-
+</head>
 
 <body>
+    <nav class="navbar navbar-expand-lg" style="background: linear-gradient(to right, #ffa351, #ffbe7b, #eed971);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacts</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Applet
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./applet-2.html">Applet 2 Leaflet Map</a></li>
+                            <li><a class="dropdown-item" href="./applet-3.html">Applet 3 Button Counts</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <div class="container">
-        <h2>Leaflet Map</h2>
         <div id="map"></div>
-
-        <script src="./applet-2.js"></script>
+        <div class="btn-container">
+            <h4 id="logCountBukels">Attendance Count: </h4>
+            <button class="btn btn-dark" id="btn">Bukel's Cafeteria, Store & Print Shop</button>
+            <h4 id="logCountWWE">Attendance Count: </h4>
+            <button class="btn btn-dark" id="btn1">Wako Wako Eatery</button>
+            <h4 id="logCountKNN">Attendance Count: </h4>
+            <button class="btn btn-dark" id="btn2">Kalenderya ni Nanay</button>
+            <div id="logContainer"></div>
+            <button class="btn btn-primary" id="btnclear">Clear</button>
+        </div>
     </div>
 
-
-
-    <div class="container2">
-        <h2>Attendance Map</h2>
-        <div class="btn-container">
-
-            <h4 id="logCountBukels">Attendance Count: </h4>
-            <button class="btn btn-dark" id="btn1" style="background-color:  #ffa351; color: rgb(0, 0, 0);">Bukel's
-                Cafeteria,
-                Store & Print Shop</button>
-            <h4 id="logCountWako">Attendance Count: </h4>
-            <button class="btn btn-dark" id="btn2" style="background-color:  #ffa351; color: rgb(0, 0, 0);">Wako Wako
-                Eatery</button>
-            <h4 id="logCountKNN">Attendance Count: </h4>
-            <button class="btn btn-dark" id="btn3" style="background-color:  #ffa351; color: rgb(0, 0, 0);">Kalenderya
-                ni
-                Nanay</button>
-            <div id="logContainer"></div>
-            <button class="btn btn-danger" id="btnclear">Clear</button>
-        </div>
-
+    <script src="./applet-2.js"></script>
 </body>
-<script src="./applet-2.js"></script>
 
 </html>
