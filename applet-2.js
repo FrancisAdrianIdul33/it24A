@@ -79,9 +79,17 @@ class LeafletMap {
         this.updateLogDisplay();
     }
 
+    updateLogDisplay() {
+        this.idContainer.innerHTML = '';
+        this.loggedData.forEach(data => {
+            const logItem = document.createElement('div');
+            logItem.className = 'log-item';
+            this.idContainer.appendChild(logItem);
+        });
+        this.displayLogCount();
+    }
 
 
-    
 }
 const Mymap = new LeafletMap('map', [8.360697, 124.867345], 17);
 
