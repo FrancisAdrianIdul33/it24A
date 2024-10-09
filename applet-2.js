@@ -89,6 +89,22 @@ class LeafletMap {
         this.displayLogCount();
     }
 
+    clearLogs() {
+        this.attendanceCountBukels = 0;
+        this.attendanceCountWako = 0;
+        this.attendanceCountKNN = 0;
+
+        this.loggedData = [];
+        this.markerCounts = {};
+        this.markers.forEach(marker => {
+            const message = marker.getPopup().getContent().split('<br>')[0];
+            this.markerCounts[message] = 0;
+            this.updateMarkerPopup(marker, message);
+        });
+
+        this.updateLogDisplay();
+    }
+
 
 }
 const Mymap = new LeafletMap('map', [8.360697, 124.867345], 17);
