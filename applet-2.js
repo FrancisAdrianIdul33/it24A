@@ -1,5 +1,4 @@
 class LeafletMap {
-
     constructor(containerId, center, zoom) {
         this.map = L.map(containerId).setView(center, zoom);
         this.initTileLayer();
@@ -16,19 +15,18 @@ class LeafletMap {
         this.btn1 = document.getElementById('btn1');
         this.btn2 = document.getElementById('btn2');
         this.btn3 = document.getElementById('btn3');
-
+        this.btnclear = document.getElementById('btnclear');
 
         this.logCountElement = document.getElementById('logCountBukels');
         this.logCount1Element = document.getElementById('logCountWako');
         this.logCount2Element = document.getElementById('logCountKNN');
         this.idContainer = document.getElementById('logContainer');
-        this.btnclear = document.getElementById('btnclear');
 
-        this.btn.addEventListener('click', () => this.dataBukels());
+        // Changed 'this.btn' to 'this.btn3' to avoid reference error
+        this.btn3.addEventListener('click', () => this.dataBukels());
         this.btn1.addEventListener('click', () => this.dataWako());
         this.btn2.addEventListener('click', () => this.dataKNN());
         this.btnclear.addEventListener('click', () => this.clearLogs());
-
     }
 
     initTileLayer() {
@@ -41,26 +39,31 @@ class LeafletMap {
     addMarker(lat, long, message) {
         const marker = L.marker([lat, long]).addTo(this.map)
             .bindPopup(message);
+        this.markers.push(marker); // Added to keep track of markers
     }
 
     loadMarkersFromJson(url) {
         fetch(url)
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`); // Added error handling for HTTP response
+                }
+                return response.json();
+            })
             .then(data => {
                 data.forEach(marker => {
                     this.addMarker(marker.latitude, marker.longitude, marker.message);
                 });
             })
-            .catch(error => console.error("Error Loading servers:", error));
+            .catch(error => console.error("Error loading markers from JSON:", error)); // Enhanced error message
     }
-
 
     displayLogCount() {
-        this.logCountElement.innerHTML = `Bukels Attendance: ${this.attendanceCountSC}`;
-        this.logCount1Element.innerHTML = `Wako Attendance: ${this.attendanceCountBA}`;
-        this.logCount2Element.innerHTML = `KNN Laboratory Attendance: ${this.attendanceCountLab}`;
-
+        this.logCountElement.innerHTML = `Bukels Attendance: ${this.attendanceCountBukels}`; // Corrected variable name
+        this.logCount1Element.innerHTML = `Wako Attendance: ${this.attendanceCountWako}`; // Corrected variable name
+        this.logCount2Element.innerHTML = `KNN Laboratory Attendance: ${this.attendanceCountKNN}`; // Corrected variable name
     }
+
     dataBukels() {
         this.addMarker(8.361655, 124.867307, "Bukel's Cafeteria, Store & Print Shop");
         this.attendanceCountBukels++;
@@ -84,6 +87,7 @@ class LeafletMap {
         this.loggedData.forEach(data => {
             const logItem = document.createElement('div');
             logItem.className = 'log-item';
+            logItem.innerText = data; // Added to display logged data
             this.idContainer.appendChild(logItem);
         });
         this.displayLogCount();
@@ -99,17 +103,19 @@ class LeafletMap {
         this.markers.forEach(marker => {
             const message = marker.getPopup().getContent().split('<br>')[0];
             this.markerCounts[message] = 0;
-            this.updateMarkerPopup(marker, message);
+            this.updateMarkerPopup(marker, message); // Ensure this method exists or handle accordingly
         });
 
         this.updateLogDisplay();
     }
 
-
+    updateMarkerPopup(marker, message) {
+        // Placeholder for updating marker popup content
+        marker.getPopup().setContent(`${message} - Count: ${this.markerCounts[message]}`);
+    }
 }
+
 const Mymap = new LeafletMap('map', [8.360697, 124.867345], 17);
-
-
 Mymap.loadMarkersFromJson('applet-2.json');
 
 document.addEventListener('DOMContentLoaded', () => {
