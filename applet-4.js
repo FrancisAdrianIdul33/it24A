@@ -44,6 +44,7 @@ class AnimeCharacterList {
         this.renderCharacterList(this.characters, characterSearchListContainer);
     }
 
+    
     filterCharacters(query, searchListContainer) {
         const filteredCharacters = this.characters.filter(character => {
             const fullName = `${character.character_name} ${character.character_anime}`;
