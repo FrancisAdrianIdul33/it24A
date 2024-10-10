@@ -1,0 +1,38 @@
+[
+    {
+        "character_id": 1,
+        "character_name": "Naruto Uzumaki",
+        "character_anime": "Naruto",
+        "character_first_appearance": "2002-10-03"
+    },
+    {
+        "character_id": 2,
+        "character_name": "Saitama",
+        "character_anime": "One Punch Man",
+        "character_first_appearance": "2015-10-05"
+    },
+    {
+        "character_id": 3,
+        "character_name": "Monkey D. Luffy",
+        "character_anime": "One Piece",
+        "character_first_appearance": "1999-10-20"
+    },
+    {
+        "character_id": 4,
+        "character_name": "Goku",
+        "character_anime": "Dragon Ball",
+        "character_first_appearance": "1986-04-26"
+    },
+    {
+        "character_id": 5,
+        "character_name": "Edward Elric",
+        "character_anime": "Fullmetal Alchemist",
+        "character_first_appearance": "2003-10-04"
+    },
+    {
+        "character_id": 6,
+        "character_name": "Levi Ackerman",
+        "character_anime": "Attack on Titan",
+        "character_first_appearance": "2013-04-07"
+    }
+]
