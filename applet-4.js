@@ -12,6 +12,7 @@ class AnimeCharacterList {
         this.bindSearchEvent();
     }
 
+    
     async fetchData() {
         try {
             const response = await fetch(this.dataUrl);
