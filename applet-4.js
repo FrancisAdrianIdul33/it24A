@@ -22,7 +22,7 @@ class AnimeCharacterList {
         }
     }
 
-    
+
     renderCharacterList(characters) {
         const characterListContainer = document.getElementById('characterList');
         characterListContainer.innerHTML = characters.map(character =>
