@@ -12,7 +12,7 @@ class AnimeCharacterList {
         this.bindSearchEvent();
     }
 
-    
+
     async fetchData() {
         try {
             const response = await fetch(this.dataUrl);
@@ -22,6 +22,7 @@ class AnimeCharacterList {
         }
     }
 
+    
     renderCharacterList(characters) {
         const characterListContainer = document.getElementById('characterList');
         characterListContainer.innerHTML = characters.map(character =>
