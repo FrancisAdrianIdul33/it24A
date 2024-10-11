@@ -24,13 +24,10 @@
         }
 
         .custom-margin {
-            margin-top: 2rem;
-            margin-left: 4rem;
-            margin-right: 4rem;
+            margin: 2rem 4rem;
             width: 90%;
             display: flex;
         }
-
 
         .btn {
             background-color: #ffa351;
@@ -47,32 +44,70 @@
 
         .btn.toggled {
             background-color: #ff5722;
-            color: rgb(0, 0, 0);
         }
 
         .flex-container {
             display: flex;
             flex-wrap: wrap;
             background-color: #ffa351;
-            margin-top: 3rem;
-            margin-bottom: 5rem;
+            margin: 3rem 0 5rem;
+            justify-content: space-between;
         }
 
         .flex-container>div {
             background-color: #eed971;
             margin: 10px;
-
             padding: 60px;
             font-size: 30px;
             width: calc(33.33% - 20px);
             text-align: center;
-            height: 200px;
+            height: 245px;
             transition: transform 0.3s ease-in-out;
         }
 
         .flex-container>div:hover {
             transform: scale(1.05);
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .applet-flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            background-color: #ffa351;
+            margin: 0 0 5rem;
+        }
+
+        .applet-flex-container>div {
+            margin-left: .5rem;
+        }
+
+        .title {
+            margin: 1rem 0 0 3rem;
+        }
+
+        .applet-card {
+            flex: 1 1 20rem;
+            max-width: 25rem;
+            height: 15rem;
+            margin-bottom: 1rem;
+            box-sizing: border-box;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .applet-card h2 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .applet-card p {
+            font-size: 1rem;
+            line-height: 1.5;
         }
     </style>
 
@@ -138,7 +173,7 @@
                 </svg>
             </span>
             <input type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default" id="characterSearchBar"/>
+                aria-describedby="inputGroup-sizing-default" id="characterSearchBar" />
             <button class="btn" type="button" id="inputGroup-sizing-default"
                 alt="Please type something here">Search</button>
         </div>
@@ -156,15 +191,81 @@
         <!--Flex container added-->
 
         <div class="flex-container">
-            <div>Card 1</div>
-            <div>Card 2</div>
-            <div>Card 3</div>
-            <div>Card 4</div>
-            <div>Card 5</div>
-            <div>Card 6</div>
-            <div>Card 7</div>
-            <div>Card 8</div>
-            <div>Card 9</div>
+
+            <div class="applet-card">
+                <h2>Applet 2 Leaflet Map</h2>
+                <p>Displays the Leaflet Map in NBSC and provides attendance logger.</p>
+                <a href="./applet-2.html">
+                    <button type="button" class="btn btn-danger">Proceed</button>
+                </a>
+            </div>
+
+            <div class="applet-card">
+                <h2>Applet 3 Event Button Logger</h2>
+                <p>Provides the button logger and monitored in every click.</p>
+                <a href="./applet-3.html">
+                    <button type="button" class="btn btn-danger">Proceed</button>
+                </a>
+            </div>
+
+            <div class="applet-card">
+                <h2>Applet 4 Dynamic Elements</h2>
+                <p>Provides a dynamic search to find the search list.</p>
+                <a href="./applet-4.html">
+                    <button type="button" class="btn btn-danger">Proceed</button>
+                </a>
+            </div>
+
+            <div class="applet-card">
+                <h2>Empty Applet</h2>
+                <p>This card is currently no applet.</p>
+                <a href="./index.html">
+                    <button type="button" class="btn btn-danger">Proceed</button>
+                </a>
+            </div>
+
+            <div class="applet-card">
+                <h2>Empty Applet</h2>
+                <p>This card is currently no applet.</p>
+                <a href="./index.html">
+                    <button type="button" class="btn btn-danger">Proceed</button>
+                </a>
+            </div>
+
+            <div class="applet-card">
+                <h2>Empty Applet</h2>
+                <p>This card is currently no applet.</p>
+                <a href="./index.html">
+                    <button type="button" class="btn btn-danger">Proceed</button>
+                </a>
+            </div>
+
+            <div class="applet-card">
+                <h2>Empty Applet</h2>
+                <p>This card is currently no applet.</p>
+                <a href="./index.html">
+                    <button type="button" class="btn btn-danger">Proceed</button>
+                </a>
+            </div>
+
+            <div class="applet-card">
+                <h2>Empty Applet</h2>
+                <p>This card is currently no applet.</p>
+                <a href="./index.html">
+                    <button type="button" class="btn btn-danger">Proceed</button>
+                </a>
+            </div>
+
+            <div class="applet-card">
+                <h2>Empty Applet</h2>
+                <p>This card is currently no applet.</p>
+                <a href="./index.html">
+                    <button type="button" class="btn btn-danger">Proceed</button>
+                </a>
+            </div>
+            
+            
+
         </div>
     </div>
 
