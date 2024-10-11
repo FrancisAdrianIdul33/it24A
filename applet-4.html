@@ -52,7 +52,6 @@
             background-color: #ffa351;
             margin: 3rem 0 5rem;
             justify-content: space-between;
-
         }
 
         .flex-container>div {
@@ -87,7 +86,6 @@
             margin: 1rem 0 0 3rem;
         }
 
-
         .applet-card {
             flex: 1 1 20rem;
             max-width: 25rem;
@@ -101,7 +99,6 @@
             text-align: center;
             font-family: Arial, sans-serif;
         }
-
 
         .applet-card h2 {
             font-size: 1.5rem;
@@ -177,96 +174,20 @@
                 </svg>
             </span>
             <input type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default" />
+                aria-describedby="inputGroup-sizing-default" id="characterSearchBar" />
             <button class="btn" type="button" id="inputGroup-sizing-default"
                 alt="Please type something here">Search</button>
         </div>
-       
+        <div id="characterList" style="margin-left: 3.5rem; margin-top: 2rem;"></div>
+        <div id="characterSearchList" style="margin-left: 3.5rem;"></div>
 
-        <!--Flex container added-->
-
-        <div class="flex-container">
-
-
-            <div class="applet-card">
-                <h2>Applet 2 Leaflet Map</h2>
-                <p>Displays the Leaflet Map in NBSC and provides attendance logger.</p>
-                <a href="./applet-2.html">
-                    <button type="button" class="btn btn-danger">Proceed</button>
-                </a>
-            </div>
-
-            <div class="applet-card">
-                <h2>Applet 3 Event Button Logger</h2>
-                <p>Provides the button logger and monitored in every click.</p>
-                <a href="./applet-3.html">
-                    <button type="button" class="btn btn-danger">Proceed</button>
-                </a>
-            </div>
-
-
-            <div class="applet-card">
-                <h2>Applet 4 Dynamic Elements</h2>
-                <p>Provides a dynamic search to find the search list.</p>
-                <a href="./applet-4.html">
-                    <button type="button" class="btn btn-danger">Proceed</button>
-                </a>
-            </div>
-
-
-            <div class="applet-card">
-                <h2>Empty Applet</h2>
-                <p>This card is currently no applet.</p>
-                <a href="./index.html">
-                    <button type="button" class="btn btn-danger">Proceed</button>
-                </a>
-            </div>
-
-
-            <div class="applet-card">
-                <h2>Empty Applet</h2>
-                <p>This card is currently no applet.</p>
-                <a href="./index.html">
-                    <button type="button" class="btn btn-danger">Proceed</button>
-                </a>
-            </div>
-
-            <div class="applet-card">
-                <h2>Empty Applet</h2>
-                <p>This card is currently no applet.</p>
-                <a href="./index.html">
-                    <button type="button" class="btn btn-danger">Proceed</button>
-                </a>
-            </div>
-
-            <div class="applet-card">
-                <h2>Empty Applet</h2>
-                <p>This card is currently no applet.</p>
-                <a href="./index.html">
-                    <button type="button" class="btn btn-danger">Proceed</button>
-                </a>
-            </div>
-
-            <div class="applet-card">
-                <h2>Empty Applet</h2>
-                <p>This card is currently no applet.</p>
-                <a href="./index.html">
-                    <button type="button" class="btn btn-danger">Proceed</button>
-                </a>
-            </div>
-
-            <div class="applet-card">
-                <h2>Empty Applet</h2>
-                <p>This card is currently no applet.</p>
-                <a href="./index.html">
-                    <button type="button" class="btn btn-danger">Proceed</button>
-                </a>
-            </div>
-            
-            
-
-        </div>
-    </div>
+        <script>
+            const button = document.getElementById('inputGroup-sizing-default');
+            button.addEventListener('click', function () {
+                button.classList.toggle('toggled');
+            });
+        </script>
+        <script src="applet-4.js"></script>
 
 </body>
 
