@@ -104,5 +104,5 @@ class WeatherApp {
         }
 }
 
-/* my API: 8460fd625d19019fde79488879652a08*/
+/* my API: */
 const weatherApp = new WeatherService();
