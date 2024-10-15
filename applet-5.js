@@ -77,7 +77,7 @@ class WeatherApp {
             } else {
                 alert('Geolocation is not supported by this browser.');
             }
-            
+
         }
         async getWeatherData(city) {
             try {
@@ -90,6 +90,7 @@ class WeatherApp {
             }
             return null;
         }
+        
         async getWeatherDataByCoordinates(latitude, longitude) {
             try {
                 const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${this.apiKey}&units=metric`);
