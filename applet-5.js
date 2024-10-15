@@ -27,7 +27,7 @@ class WeatherApp {
 
         this.weatherCard.style.display = 'block';
     }
-    
+
     }
     class WeatherService extends WeatherApp {
 
@@ -76,6 +76,7 @@ class WeatherApp {
             } else {
                 alert('Geolocation is not supported by this browser.');
             }
+            
         }
         async getWeatherData(city) {
             try {
