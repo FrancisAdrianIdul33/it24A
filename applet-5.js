@@ -55,7 +55,7 @@ class WeatherApp {
             } else {
                 alert('Please enter a city name.');
             }
-            
+
         }
         async fetchWeatherByLocation() {
             if (navigator.geolocation) {
@@ -77,6 +77,7 @@ class WeatherApp {
             } else {
                 alert('Geolocation is not supported by this browser.');
             }
+            
         }
         async getWeatherData(city) {
             try {
