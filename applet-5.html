@@ -23,16 +23,7 @@
             background-color: #f8f8f0;
         }
 
-        .applet-container{
-            margin-top: 1rem;
-            margin-left: 2rem;
-        }
-
-        .input-search{
-          margin-left: 3rem;
-          margin-top: 2rem;
-          width:50%;
-        }
+      
     </style>
 
 </head>
@@ -85,30 +76,37 @@
     </div>
 
     <body>
-
-        <body>
-
-            <div class="container">
-                <h1>Weather App</h1>
-
-                
-                <!--Textbox-->
-                <input type="text" id="cityInput" placeholder="Enter city name" />
-                <button id="getWeatherBtn" class="btn btn-primary">Get Weather</button>
-
-                <!--Via Geolocation-->
-                <button id="getLocationBtn" class="btn btn-secondary">Use My Location</button>
-
-                <div id="weatherCard" class="weather-card" style="display: none;">
-                    <br>
-                    <h2 id="cityName"></h2>
-                    <p id="temperature"></p>
-                    <p id="description"></p>
-                    <p id="humidity"></p>
-                    <p id="windSpeed"></p>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <div class="contain">
+                        <h3>Apikey</h3>
+                        <input type="text" id="apiInput" placeholder="Enter API key" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="container">
+                        <h1 style="margin-top: 1.5rem;">Weather App</h1>
+                        <input type="text" id="cityInput" placeholder="Enter city name" />
+                        <button id="getWeatherBtn" class="btn btn-primary" style="margin-top: 1rem;">Get
+                            Weather</button>
+                        <button id="getLocationBtn" class="btn btn-secondary"
+                            style="margin-top: 1rem; margin-left: 0.5rem;">Use My Location</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="weatherCard" class="weather-card" style="display: none;">
+                        <br>
+                        <h2 id="cityName"></h2>
+                        <p id="temperature"></p>
+                        <p id="description"></p>
+                        <p id="humidity"></p>
+                        <p id="windSpeed"></p>
+                    </div>
                 </div>
             </div>
-            <script src="applet-5.js"></script>
-        </body>
+        </div>
+        <script src="applet-5.js"></script>
+    </body>
 
 </html>
