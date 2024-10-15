@@ -27,7 +27,6 @@ class WeatherApp {
 
         this.weatherCard.style.display = 'block';
     }
-
     }
     class WeatherService extends WeatherApp {
 
@@ -56,7 +55,7 @@ class WeatherApp {
                 alert('Please enter a city name.');
             }
         }
-        
+
         async fetchWeatherByLocation() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(
