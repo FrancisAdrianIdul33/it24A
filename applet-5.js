@@ -90,7 +90,7 @@ class WeatherApp {
             }
             return null;
         }
-        
+
         async getWeatherDataByCoordinates(latitude, longitude) {
             try {
                 const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${this.apiKey}&units=metric`);
@@ -103,5 +103,6 @@ class WeatherApp {
             return null;
         }
 }
+
 /* my API: 8460fd625d19019fde79488879652a08*/
 const weatherApp = new WeatherService();
