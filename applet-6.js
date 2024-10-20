@@ -19,7 +19,7 @@ class todoList{
             this.editingIndex === -1 ? this.addTask(taskText) : this.updateTask(taskText);
             this.todoInput.value = '';
         }
-        
+
     }
     addTask(taskText) {
         const listItem = document.createElement('li');
@@ -34,6 +34,7 @@ class todoList{
             </div>
         `;
         this.todoList.appendChild(listItem);
+        
     }
     doneTask(event) {
         const taskItem = event.target.closest('.todo-item');
