@@ -34,7 +34,7 @@ class todoList{
             </div>
         `;
         this.todoList.appendChild(listItem);
-        
+
     }
     doneTask(event) {
         const taskItem = event.target.closest('.todo-item');
@@ -43,6 +43,7 @@ class todoList{
 
         const buttons = taskItem.querySelectorAll('button');
         buttons.forEach(button => button.disabled = true);
+        
     }
     updateTask(taskText) {
         this.todoList.children[this.editingIndex].querySelector('.task-text').textContent = taskText;
