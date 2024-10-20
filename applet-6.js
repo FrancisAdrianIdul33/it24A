@@ -48,7 +48,7 @@ class todoList{
     updateTask(taskText) {
         this.todoList.children[this.editingIndex].querySelector('.task-text').textContent = taskText;
         this.resetEditing();
-        
+
     }
     removeTask(event) {
         this.todoList.removeChild(event.target.closest('.todo-item'));
@@ -73,5 +73,6 @@ class TimestampedTodoList extends todoList {
         timestamp.textContent = new Date().toLocaleString();
         taskItem.appendChild(timestamp);
     }
+    
 }
 document.addEventListener('DOMContentLoaded', () => new todoList());
