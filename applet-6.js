@@ -19,6 +19,7 @@ class todoList{
             this.editingIndex === -1 ? this.addTask(taskText) : this.updateTask(taskText);
             this.todoInput.value = '';
         }
+        
     }
     addTask(taskText) {
         const listItem = document.createElement('li');
